@@ -243,28 +243,28 @@ echo $lf;
 echo "$lf$lf EXAMPLE 15$lf";
 
 // Try wrong city name.
-try {
-    $weather = $owm->getWeather('ThisCityNameIsNotValidAndDoesNotExist', $units, $lang);
-} catch (OWMException $e) {
-    echo $e->getMessage().' (Code '.$e->getCode().').';
-    echo $lf;
-}
+// try {
+//     $weather = $owm->getWeather('ThisCityNameIsNotValidAndDoesNotExist', $units, $lang);
+// } catch (OWMException $e) {
+//     echo $e->getMessage().' (Code '.$e->getCode().').';
+//     echo $lf;
+// }
 
-// Try invalid $query.
-try {
-    $weather = $owm->getWeather(new \DateTime('now'), $units, $lang);
-} catch (\Exception $e) {
-    echo $e->getMessage().' (Code '.$e->getCode().').';
-    echo $lf;
-}
+// // Try invalid $query.
+// try {
+//     $weather = $owm->getWeather(new \DateTime('now'), $units, $lang);
+// } catch (\Exception $e) {
+//     echo $e->getMessage().' (Code '.$e->getCode().').';
+//     echo $lf;
+// }
 
-// Full error handling would look like this:
-try {
-    $weather = $owm->getWeather(-1, $units, $lang);
-} catch (OWMException $e) {
-    echo 'OpenWeatherMap exception: '.$e->getMessage().' (Code '.$e->getCode().').';
-    echo $lf;
-} catch (\Exception $e) {
-    echo 'General exception: '.$e->getMessage().' (Code '.$e->getCode().').';
-    echo $lf;
-}
+// // Full error handling would look like this:
+// try {
+//     $weather = $owm->getWeather(-1, $units, $lang);
+// } catch (OWMException $e) {
+//     echo 'OpenWeatherMap exception: '.$e->getMessage().' (Code '.$e->getCode().').';
+//     echo $lf;
+// } catch (\Exception $e) {
+//     echo 'General exception: '.$e->getMessage().' (Code '.$e->getCode().').';
+//     echo $lf;
+// }
