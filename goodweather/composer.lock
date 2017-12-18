@@ -4,8 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
-    "content-hash": "38da542c673e3473ee871834242cd057",
+    "content-hash": "0e7dde1d509ae17c1fe3c3a9fb5408de",
     "packages": [
         {
             "name": "caouecs/laravel4-lang",
@@ -30,9 +29,26 @@
                 "overtrue/laravel-lang": "Command to add languages in your project"
             },
             "type": "library",
-=======
-    "content-hash": "14c4b15e166a7e7fec5a27cda13895e0",
-    "packages": [
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "caouecs",
+                    "email": "caouecs@caouecs.net"
+                }
+            ],
+            "description": "Languages for Laravel",
+            "keywords": [
+                "lang",
+                "languages",
+                "laravel",
+                "lpm"
+            ],
+            "abandoned": "caouecs/laravel-lang",
+            "time": "2017-11-06T19:03:05+00:00"
+        },
         {
             "name": "cmfcmf/openweathermap-php-api",
             "version": "v2.2.2",
@@ -121,28 +137,12 @@
                     "Cornford\\Googlmapper": "src/"
                 }
             },
->>>>>>> dev
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "authors": [
                 {
-<<<<<<< HEAD
-                    "name": "caouecs",
-                    "email": "caouecs@caouecs.net"
-                }
-            ],
-            "description": "Languages for Laravel",
-            "keywords": [
-                "lang",
-                "languages",
-                "laravel",
-                "lpm"
-            ],
-            "abandoned": "caouecs/laravel-lang",
-            "time": "2017-11-06T19:03:05+00:00"
-=======
                     "name": "Bradley Cornford",
                     "email": "me@bradleycornford.co.uk"
                 }
@@ -157,7 +157,6 @@
                 "streetview"
             ],
             "time": "2017-10-24T11:49:52+00:00"
->>>>>>> dev
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -604,16 +603,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.5.25",
+            "version": "v5.5.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "0a5b6112f325c56ae5a6679c08a0a10723153fe0"
+                "reference": "d7e6a7aab600c5cfae595ea22074ac3c536cbc28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/0a5b6112f325c56ae5a6679c08a0a10723153fe0",
-                "reference": "0a5b6112f325c56ae5a6679c08a0a10723153fe0",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/d7e6a7aab600c5cfae595ea22074ac3c536cbc28",
+                "reference": "d7e6a7aab600c5cfae595ea22074ac3c536cbc28",
                 "shasum": ""
             },
             "require": {
@@ -734,7 +733,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-12-11T14:59:28+00:00"
+            "time": "2017-12-18T14:15:59+00:00"
         },
         {
             "name": "laravel/tinker",
