@@ -1,0 +1,13 @@
+body, html {
+    height: 100%;
+    background-image: url("../img/GOODWEATHER.png");
+}
+
+.active-white-2 input[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid #4285f4;
+    box-shadow: 0 1px 0 0 #4285f4;
+}
+.active-white input[type=text] {
+    border-bottom: 1px solid #4285f4;
+    box-shadow: 0 1px 0 0 #4285f4;
+}
