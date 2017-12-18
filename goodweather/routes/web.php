@@ -14,8 +14,6 @@
 
 Route::get('/', 'HomeController@home');
 
-Route::get('/', 'MapController@index');
-
 Route::get('/examples/CurrentWeather', function (){
 	return view('examples.CurrentWeather');
 });
