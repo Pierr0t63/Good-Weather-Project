@@ -1,6 +1,8 @@
 body, html {
     height: 100%;
     background-image: url("../img/GOODWEATHER.png");
+    margin: 0;
+    padding: 0;
 }
 
 .active-white-2 input[type=text]:focus:not([readonly]) {
