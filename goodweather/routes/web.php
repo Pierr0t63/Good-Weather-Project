@@ -27,3 +27,7 @@ Route::get('/examples/WeatherForecast', function (){
 Route::get('/examples/WeatherHistory', function (){
 	return view('examples.WeatherHistory');
 });
+
+Route::get('/examples/dl_test', function (){
+	return view('examples.dl_test');
+});
