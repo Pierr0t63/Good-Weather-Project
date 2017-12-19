@@ -25,7 +25,7 @@
             {{ csrf_field() }}
             <div class="row justify-content-center text-center">
                 {{ csrf_field() }}
-                <input id="posUser" name="posUser" class="form-control w-100 text-white col-lg-5 col-md-5 col-sm-12 col-xs-12" type="text" placeholder="Renseignez votre ville, code postal..." aria-label="Search" title="Renseignez votre position">
+                <input id="posUser" name="posUser" class="form-control w-100 text-white col-lg-3 col-md-3 col-sm-10 col-xs-10 mr-4" type="text" placeholder="Renseignez votre ville, code postal..." aria-label="Search" title="Renseignez votre position">
                 
                 <button id="geolo" type="button" class="btn btn-outline-warning waves-effect "><i class="fa fa-rocket" aria-hidden="true" title="Cliquez-ici pour vous géolocaliser"></i></button>
             </div>
