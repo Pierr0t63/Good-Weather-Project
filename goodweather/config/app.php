@@ -165,6 +165,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Gmopx\LaravelOWM\LaravelOWMServiceProvider::class,
         Cornford\Googlmapper\MapperServiceProvider::class,
+        Khill\Lavacharts\Laravel\LavachartsServiceProvider::class,
 
 
         /*
@@ -229,6 +230,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Mapper' => Cornford\Googlmapper\Facades\MapperFacade::class,
+        'Lava' => Khill\Lavacharts\Laravel\LavachartsFacade::class,
 
     ],
 

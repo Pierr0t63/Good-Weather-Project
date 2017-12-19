@@ -24,7 +24,7 @@ class MapController extends Controller
 
         // Get OpenWeatherMap object. Don't use caching (take a look into Example_Cache.php to see how it works).
         $owm = new OpenWeatherMap();
-        $owm->setApiKey('e469e4ae90d47fcdf9df7c2666e35487');
+        $owm->setApiKey('');
 
         // Example 1: Get current temperature in Berlin.
         $weather = $owm->getWeather('Clermont-Ferrand', $units, $lang);
