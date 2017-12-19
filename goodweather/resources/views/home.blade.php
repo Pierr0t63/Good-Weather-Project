@@ -19,20 +19,20 @@
 <body >
     <!-- HEADER -->
     <header class="container-fluid justify-content-center text-center">
-        <img src="img/logo.png">
+        <img src="img/logo.png" alt="logo Good Weather" class="mb-5">
 
-        <div class="row justify-content-center text-center">
-
-            <form class="form-inline active-white-2 col-4" action='{{URL::current()}}' method="POST">
+        <form class="active-white-2 justify-content-center text-center" action='{{URL::current()}}' method="POST">
+            {{ csrf_field() }}
+            <div class="row justify-content-center text-center">
                 {{ csrf_field() }}
-                <input id="posUser" name="posUser" class="form-control w-100 text-white" type="text" placeholder="Renseignez votre ville, code postal..." aria-label="Search" title="Renseignez votre position">
-
-                <input type="submit" class="btn btn-outline-white waves-effect"></input>
-            </form>
-            <button type="button" class="btn btn-outline-warning waves-effect px-3"><i class="fa fa-rocket" aria-hidden="true" title="Cliquez-ici pour vous géolocaliser"></i></button>
-        </div>
+                <input id="posUser" name="posUser" class="form-control w-100 text-white col-lg-5 col-md-5 col-sm-12 col-xs-12" type="text" placeholder="Renseignez votre ville, code postal..." aria-label="Search" title="Renseignez votre position">
+                
+                <button id="geolo" type="button" class="btn btn-outline-warning waves-effect "><i class="fa fa-rocket" aria-hidden="true" title="Cliquez-ici pour vous géolocaliser"></i></button>
+            </div>
             
-        
+            <input type="submit" class="btn btn-outline-white waves-effect float-left" id="validation"></input>
+
+        </form>
 
     </header>
     <!--  END HEADER -->
