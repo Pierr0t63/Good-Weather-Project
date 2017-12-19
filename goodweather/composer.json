@@ -7,7 +7,6 @@
     "require": {
         "php": ">=7.0.0",
         "caouecs/laravel-lang": "^3.0",
-        "caouecs/laravel4-lang": "^3.0",
         "cornford/googlmapper": "2.*",
         "fideloper/proxy": "~3.3",
         "gmopx/laravel-owm": "^0.1.2",
