@@ -28,7 +28,7 @@ $units = 'metric';
 $owm = new OpenWeatherMap($myApiKey);
 
 // Example 1: Get hourly weather history between 2014-01-01 and today.
-$history = $owm->getWeatherHistory('Berlin', new \DateTime('2014-01-01'), new \DateTime('now'), 'hour', $units, $lang);
+$history = $owm->getWeatherHistory('Vichy', new \DateTime('2017-12-19'), new \DateTime('now'), 'hour', $units, $lang);
 
 foreach ($history as $weather) {
     echo 'Average temperature at '.$weather->time->format('d.m.Y H:i').': '.$weather->temperature."\n\r<br />";

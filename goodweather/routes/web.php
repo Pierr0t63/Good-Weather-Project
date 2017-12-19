@@ -31,3 +31,11 @@ Route::get('/examples/WeatherHistory', function (){
 Route::get('/examples/dl_test', function (){
 	return view('examples.dl_test');
 });
+
+Route::get('/examples/dlhome', function(){
+	return view('examples.dlhome');
+});
+
+Route::get('/examples/json', function (){
+	return view('examples/json');
+});
