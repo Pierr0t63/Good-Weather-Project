@@ -32,5 +32,8 @@ Route::get('/examples/dl_test', function (){
 	return view('examples.dl_test');
 });
 
-Route::get('/laracharts', 'ChartController@getLaraChart');
+Route::get('/examples/geoloc', function (){
+	return view('examples.geoloc');
+});
 
+Route::get('/laracharts', 'ChartController@getLaraChart');
