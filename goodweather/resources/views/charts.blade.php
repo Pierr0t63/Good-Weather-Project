@@ -16,24 +16,24 @@
     <div class="tab-pane fade in show active" id="panel5" role="tabpanel">
         <br>
         <section id="divTemp" class="container-fluid">
-                @linechart('Temps','divTemp')
-            </section>
+            @linechart('Temps','divTemp')
+        </section>
     </div>
     <!--/.Panel 1-->
     <!--Panel 2-->
     <div class="tab-pane fade" id="panel6" role="tabpanel">
         <br>
          <section id="divWind" class="container-fluid">
-                @linechart('Vents','divWind')
-            </section>
+            @linechart('Vents','divWind')
+        </section>
     </div>
     <!--/.Panel 2-->
     <!--Panel 3-->
     <div class="tab-pane fade" id="panel7" role="tabpanel">
         <br>
         <section id="divHumidity" class="container-fluid">
-                @linechart('Humidity','divHumidity')
-            </section>
+            @linechart('Humidity','divHumidity')
+        </section>
     </div>
     <!--/.Panel 3-->
 </div>

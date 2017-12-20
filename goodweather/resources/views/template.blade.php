@@ -17,7 +17,7 @@
 </head>
 
 <body >
-
+    <div class="navbar" style="display: none;"></div>
     @include('header')
 
     <!-- WEATHER -->
@@ -33,9 +33,10 @@
         <!-- GRAPHS -->
         @include('charts')
             
-        @endisset
+        
         <!-- END GRAPHS -->
     </section>
+    @endisset
     <!-- END WEATHER -->
 
     <!-- FOOTER -->
