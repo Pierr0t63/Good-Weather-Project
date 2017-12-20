@@ -22,7 +22,6 @@
         <img src="img/logo.png" alt="logo Good Weather" class="mb-lg-5">
 
         <form class="active-white-2 justify-content-center text-center" action='{{URL::current()}}' method="POST">
-            {{ csrf_field() }}
             <div class="row justify-content-center text-center">
                 {{ csrf_field() }}
                 <input id="posUser" name="posUser" class="form-control w-100 text-white col-lg-3 col-md-3 col-sm-10 col-xs-10 mr-lg-4" type="text" placeholder="Renseignez votre ville, code postal..." aria-label="Search" title="Renseignez votre position">
@@ -38,16 +37,103 @@
     <!--  END HEADER -->
 
     <!-- WEATHER -->
-    <section class="container-fluid">
-        
+    <section class=" row justify-content-center text-center col-12 mt-5 mb-5">
+        <div class='weather-card col-3 p-0 justify-content-end'>
+          <div class='weather-card--landmark mb-4'>
+            <div class='landmark'>
+              <!-- <img src=''> -->
+            </div>
+            <div class='clouds'></div>
+          </div>
+          <div class='weather-card--cityname'>
+            <h1>
+              Nom de la ville
+            </h1>
+          </div>
+          <div class='weather-card--details'>
+            <span class='details--day'>Jour</span>
+            |
+            <span class='details--date'>Mois</span>
+            |
+            <span class='details--time'>Heures</span>
+          </div>
+          
+          <div class='weather-card--cityname mt-2'>
+            <h1>
+              Levé du soleil
+            </h1>
+          </div>
+          <div class='weather-card--details'>
+            <span class='details--day'>09h00</span>
+        </div>
+
+        <div class='weather-card--cityname mt-2'>
+            <h1>
+              Couché du soleil
+            </h1>
+          </div>
+          <div class='weather-card--details'>
+            <span class='details--day'>17h00</span>
+        </div>
+
+        <div class='weather-card--temperature mt-4'>
+            <ul>
+              <li class='outer-temp'>22</li>
+              <li class='mid-temp left-50'>26</li>
+              <li class='current-temp'>29</li>
+              <li class='mid-temp right-50'>28</li>
+              <li class='outer-temp'>30</li>
+            </ul>
+          </div>
+        </div>
+        <!-- MAP -->
+        <section id="carte" class="container col-6 mx-auto p-0 rounded">
+                {!! Mapper::render() !!}
+        </section>
+        <!-- END MAP -->
+
+        <!-- GRAPHS -->
+        @isset($city)
+            <section id="divTemp" class="container-fluid">
+                @linechart('Temps','divTemp')
+            </section>
+            
+
+            <section id="divWind" class="container-fluid">
+                @linechart('Vents','divWind')
+            </section>
+            
+
+            <section id="divHumidity" class="container-fluid">
+                @linechart('Humidity','divHumidity')
+            </section>
+            
+        @endisset
+        <!-- END GRAPHS -->
     </section>
     <!-- END WEATHER -->
 
-    <!-- MAP -->
-    <section id="carte" class="container-fluid mx-auto p-0">
-            {!! Mapper::render() !!}
-    </section>
-    <!-- END MAP -->
+    
+
+    <script type="text/javascript">
+
+        function initializeAutocomplete(id) {
+            var options = { 
+                types: ['(cities)'],
+                componentRestrictions: {country: 'fr'}
+            };
+            var element = document.getElementById(id);
+                if (element) {
+                    var autocomplete = new google.maps.places.Autocomplete(element, options);
+                }
+        }
+
+
+        google.maps.event.addDomListener(window, 'load', function() {
+            initializeAutocomplete('posUser');
+        });
+
+    </script>
 
     <!-- FOOTER -->
     <!--Copyright-->
@@ -68,6 +154,7 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyCE3Td6VrNKRiGOPjLdKfKiVKGIoOhDDuw"></script>
 </body>
 
 </html>
