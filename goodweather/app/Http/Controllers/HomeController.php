@@ -53,24 +53,24 @@ class HomeController extends Controller
         }
         \Lava::LineChart('Temps', $temperatures, [
             'title' => 'Températures à '.$forecast->city->name,
-            'width' => '1000',
-            'height'=> '500',
+            'width' => '100%',
+            'height'=> '250',
             'titleTextStyle' => [
                'color'    => '#FF0000 ',
                'fontSize' => 24
         ]]);
         \Lava::LineChart('Vents', $winds, [
             'title' => 'Vent à '.$forecast->city->name,
-            'width' => '1000',
-            'height'=> '500',
+            'width' => '100%',
+            'height'=> '250',
             'titleTextStyle' => [
                'color'    => '#FF0000 ',
                'fontSize' => 24
         ]]);
         \Lava::LineChart('Humidity', $humidity, [
             'title' => 'Humidité de l\'air à '.$forecast->city->name,
-            'width' => '1000',
-            'height'=> '500',
+            'width' => '100%',
+            'height'=> '250',
             'titleTextStyle' => [
                'color'    => '#FF0000 ',
                'fontSize' => 24
