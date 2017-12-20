@@ -19,7 +19,10 @@
 <body >
     <!-- HEADER -->
     <header class="container-fluid justify-content-center text-center">
+<<<<<<< HEAD
         <img src="img/logo.png" alt="logo Good Weather" class="mb-lg-5">
+=======
+>>>>>>> dev
 
         <form class="active-white-2 justify-content-center text-center" action='{{URL::current()}}' method="POST">
             <div class="row justify-content-center text-center">
