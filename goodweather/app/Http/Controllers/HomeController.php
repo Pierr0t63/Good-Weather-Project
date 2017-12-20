@@ -48,7 +48,7 @@ class HomeController extends Controller
             $humidity->addNumberColumn('Humidité (%)');
 
             foreach ($forecast as $weather){
-                $temperatures->addRow([$weather->time->from->format('d.m.Y H:i:s'), $weather->temperature->getValue()]);
+                $temperatures->addRow([$weather->time->from->format('d.m.Y H:i:s'), round($weather->temperature->getValue())]);
                 $winds->addRow([$weather->time->from->format('d.m.Y H:i:s'), $weather->wind->speed->getValue()]);
                 $humidity->addRow([$weather->time->from->format('d.m.Y H:i:s'), $weather->humidity->getValue()]);
             }
