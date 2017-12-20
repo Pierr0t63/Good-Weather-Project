@@ -29,8 +29,12 @@ $units = 'metric';
 $owm = new OpenWeatherMap($myApiKey);
 
 // Example 1: Get forecast for the next 10 days for Berlin.
+<<<<<<< HEAD
 $forecast = $owm->getWeatherForecast('Vichy', $units, $lang, '', 5);
 
+=======
+$forecast = $owm->getWeatherForecast('Berlin', $units, $lang, '', 5);
+>>>>>>> master
 echo "EXAMPLE 1<hr />\n\n\n";
 
 echo "City: " . $forecast->city->name;
@@ -42,27 +46,19 @@ echo "<br />\n";
 echo "<br />\n";
 
 foreach ($forecast as $weather) {
-    // Each $weather contains a Cmfcmf\ForecastWeather object which is almost the same as the Cmfcmf\Weather object.
-    // Take a look into 'Examples_Current.php' to see the available options.
-    echo "Weather forecast at " . $weather->time->day->format('d.m.Y') . " from " . $weather->time->from->format('H:i') . " to " . $weather->time->to->format('H:i');
-    echo "<br />\n";
-    echo $weather->temperature;
-    echo "<br />\n";
-    echo "Sun rise: " . $weather->sun->rise->format('d.m.Y H:i (e)');
-    echo "<br />\n";
-    echo "---";
+    echo $weather->temperature->getValue();
     echo "<br />\n";
 }
 
 // Example 2: Get forecast for the next 3 days for Berlin.
-$forecast = $owm->getWeatherForecast('Berlin', $units, $lang, '', 3);
-echo "EXAMPLE 2<hr />\n\n\n";
+// $forecast = $owm->getWeatherForecast('Berlin', $units, $lang, '', 3);
+// echo "EXAMPLE 2<hr />\n\n\n";
 
-foreach ($forecast as $weather) {
-    echo "Weather forecast at " . $weather->time->day->format('d.m.Y') . " from " . $weather->time->from->format('H:i') . " to " . $weather->time->to->format('H:i') . "<br />";
-    echo $weather->temperature . "<br />\n";
-    echo "<br />\n";
-    echo "Sun rise: " . $weather->sun->rise->format('d.m.Y H:i (e)');
-    echo "<br />\n";
-    echo "---<br />\n";
-}
+// foreach ($forecast as $weather) {
+//     echo "Weather forecast at " . $weather->time->day->format('d.m.Y') . " from " . $weather->time->from->format('H:i') . " to " . $weather->time->to->format('H:i') . "<br />";
+//     echo $weather->temperature . "<br />\n";
+//     echo "<br />\n";
+//     echo "Sun rise: " . $weather->sun->rise->format('d.m.Y H:i (e)');
+//     echo "<br />\n";
+//     echo "---<br />\n";
+// }

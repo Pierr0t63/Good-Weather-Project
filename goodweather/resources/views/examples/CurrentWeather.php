@@ -34,7 +34,7 @@ $units = 'metric';
 
 // Get OpenWeatherMap object. Don't use caching (take a look into Example_Cache.php to see how it works).
 $owm = new OpenWeatherMap();
-$owm->setApiKey($myApiKey);
+$owm->setApiKey('e469e4ae90d47fcdf9df7c2666e35487');
 
 // Example 1: Get current temperature in Berlin.
 $weather = $owm->getWeather('Clermont-Ferrand', $units, $lang);
@@ -68,6 +68,7 @@ echo $lf;
 // Returns the unit only:
 echo $weather->temperature->getUnit();
 echo $lf;
+
 
 /*
  * In the example above we're using a "shortcut". OpenWeatherMap returns the minimum temperature of a day,
