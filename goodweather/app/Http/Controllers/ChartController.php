@@ -28,7 +28,6 @@ class ChartController extends Controller
 		$chart = \Lava::LineChart('MaTable',$stocksTable, [
 			'title' => 'Ceci est un test',
 			'width' => '1000',
-			'chartArea.width' => "900",
 			'height'=> '500',
 			'titleTextStyle' => [
         		'color'    => '#FF0000',

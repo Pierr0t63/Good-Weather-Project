@@ -23,7 +23,6 @@ Route::get('/examples/WeatherForecast', function (){
 	return view('examples.WeatherForecast');
 });
 
-
 Route::get('/examples/WeatherHistory', function (){
 	return view('examples.WeatherHistory');
 });
