@@ -101,7 +101,14 @@
                 
                 <button id="geolo" type="button" class="btn btn-outline-warning waves-effect "><i class="fa fa-rocket" aria-hidden="true" title="Cliquez-ici pour vous géolocaliser"></i></button>
             </div>
-            
+            @isset($message)
+              <div class="alert alert-dismissible alert-danger fade show text-center" role="alert">
+                {{ $message }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            @endisset
             <input type="submit" class="btn btn-outline-white waves-effect float-left" id="validation"></input>
 
         </form>

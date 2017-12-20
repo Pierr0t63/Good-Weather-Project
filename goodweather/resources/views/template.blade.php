@@ -38,10 +38,6 @@
     </section>
     <!-- END WEATHER -->
 
-    
-
-   
-
     <!-- FOOTER -->
     <!--Copyright-->
     <div class="footer-copyright justify-content-center text-center">
