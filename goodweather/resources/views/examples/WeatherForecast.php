@@ -37,7 +37,7 @@ foreach ($forecast as $weather) {
     // Take a look into 'Examples_Current.php' to see the available options.
     echo "Weather forecast at " . $weather->time->day->format('d.m.Y') . " from " . $weather->time->from->format('H:i') . " to " . $weather->time->to->format('H:i');
     echo "<br />\n";
-    echo $weather->temperature;
+    echo $weather->humidity->getValue();
     echo "<br />\n";
     echo "Sun rise: " . $weather->sun->rise->format('d.m.Y H:i (e)');
     echo "<br />\n";

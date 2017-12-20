@@ -14,3 +14,17 @@
 
 Route::get('/', 'HomeController@index');
 Route::post('/', 'HomeController@maMeteo');
+
+Route::get('/examples/CurrentWeather', function (){
+	return view('examples.CurrentWeather');
+});
+
+
+Route::get('/examples/WeatherForecast', function (){
+	return view('examples.WeatherForecast');
+});
+
+
+Route::get('/examples/WeatherHistory', function (){
+	return view('examples.WeatherHistory');
+});

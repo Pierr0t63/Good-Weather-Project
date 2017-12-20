@@ -37,10 +37,19 @@
     <!--  END HEADER -->
 
     <!-- WEATHER -->
-    <section id="divMeteo" class="container-fluid">
-        
-    </section>
-    @linechart('Temps','divMeteo')
+    @isset($city)
+        <section id="divTemp" class="container-fluid">
+        </section>
+        @linechart('Temps','divTemp')
+
+        <section id="divWind" class="container-fluid">
+        </section>
+        @linechart('Vents','divWind')
+
+        <section id="divHumidity" class="container-fluid">
+        </section>
+        @linechart('Humidity','divHumidity')
+    @endisset
     <!-- END WEATHER -->
 
     <!-- MAP -->
@@ -59,6 +68,7 @@
             var element = document.getElementById(id);
                 if (element) {
                     var autocomplete = new google.maps.places.Autocomplete(element, options);
+                }
         }
 
 
