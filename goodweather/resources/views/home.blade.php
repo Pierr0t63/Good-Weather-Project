@@ -40,16 +40,69 @@
     <!--  END HEADER -->
 
     <!-- WEATHER -->
-    <section class="container-fluid">
-        
-    </section>
-    <!-- END WEATHER -->
+    <!-- WEATHER -->
+    <section class=" row justify-content-center text-center col-12 mt-5 mb-5">
 
-    <!-- MAP -->
-    <section id="carte" class="container-fluid mx-auto p-0">
+        <div class='weather-card col-3 p-0 justify-content-end'>
+  <div class='weather-card--landmark mb-4'>
+    <div class='landmark'>
+      <!-- <img src=''> -->
+    </div>
+    <div class='clouds'></div>
+  </div>
+  <div class='weather-card--cityname'>
+    <h1>
+      Nom de la ville
+    </h1>
+  </div>
+  <div class='weather-card--details'>
+    <span class='details--day'>Jour</span>
+    |
+    <span class='details--date'>Mois</span>
+    |
+    <span class='details--time'>Heures</span>
+  </div>
+  
+  <div class='weather-card--cityname mt-2'>
+    <h1>
+      Levé du soleil
+    </h1>
+  </div>
+  <div class='weather-card--details'>
+    <span class='details--day'>09h00</span>
+</div>
+
+<div class='weather-card--cityname mt-2'>
+    <h1>
+      Couché du soleil
+    </h1>
+  </div>
+  <div class='weather-card--details'>
+    <span class='details--day'>17h00</span>
+</div>
+
+<div class='weather-card--temperature mt-4'>
+    <ul>
+      <li class='outer-temp'>22</li>
+      <li class='mid-temp left-50'>26</li>
+      <li class='current-temp'>29</li>
+      <li class='mid-temp right-50'>28</li>
+      <li class='outer-temp'>30</li>
+    </ul>
+  </div>
+</div>
+
+<!-- MAP -->
+    <section id="carte" class="container col-6 mx-auto p-0 rounded">
             {!! Mapper::render() !!}
     </section>
     <!-- END MAP -->
+
+</section>
+<!-- END WEATHER -->
+    <!-- END WEATHER -->
+
+    
 
     <script type="text/javascript">
 

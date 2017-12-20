@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use Mapper;
 use Cmfcmf\OpenWeatherMap;
 use Cmfcmf\OpenWeatherMap\Exception as OWMException;
+use Khill\Lavacharts\Lavacharts;
+
+// require('vendor/autoload.php');
 
 class HomeController extends Controller
 {
@@ -26,9 +29,22 @@ class HomeController extends Controller
         $owm = new OpenWeatherMap();
         $owm->setApiKey('e469e4ae90d47fcdf9df7c2666e35487');
 
-        $weather = $owm->getWeather($city, $units, $lang);
-        Mapper::map($weather->city->lat, $weather->city->lon);
+        $forecast = $owm->getWeatherForecast($city.',fr', $units, $lang, '', 5);
 
-		return view ("home");
+        // $lava = new Lavacharts; // See note below for Laravel
+        $temperatures = \Lava::DataTable();
+
+        $temperatures->addDateTimeColumn('Heure');
+        $temperatures->addNumberColumn('Température (°C)');
+        foreach ($forecast as $weather){
+            $temperatures->addRow([$weather->time->from->format('d.m.Y H:i:s'), $weather->temperature->getValue()]);
+        }
+        \Lava::LineChart('Temps', $temperatures, [
+            'title' => 'Météo à '.$forecast->city->name
+        ]);
+
+        Mapper::map($forecast->city->lat, $forecast->city->lon);
+
+		return view("home");
 	}
 }

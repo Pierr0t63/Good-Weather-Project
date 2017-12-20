@@ -15,3 +15,129 @@ body, html {
     box-shadow: 0 1px 0 0 #fff;
     color: #fff;
 }
+
+/*//CARD*/
+.weather-card {
+  width: 325px;
+  height: 500px;
+  background: #fff;
+  border-radius: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 15px 5px rgba(203, 203, 199, 0.38);
+          box-shadow: 0 0 15px 5px rgba(203, 203, 199, 0.38);
+}
+
+.weather-card--landmark {
+  width: 100%;
+  height: 200px;
+  background: #D2D7FE;
+  position: relative;
+  overflow: hidden;
+}
+
+.weather-card--cityname {
+  color: #D95720;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.weather-card--cityname h1 {
+  font-size: 1em;
+  letter-spacing: 4px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.weather-card--details {
+  color: #bfbfbf;
+  font-size: 0.6em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+
+.weather-card--temperature {
+  width: 90%;
+  position: initial;
+  bottom: 3em;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+  color: #D95720;
+}
+
+.weather-card--temperature ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.weather-card--temperature ul li {
+  display: inline-block;
+  width: 20%;
+  float: left;
+  text-align: center;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.outer-temp {
+  font-size: 1em;
+  font-weight: 100;
+}
+
+.mid-temp {
+  font-size: 1.5em;
+}
+
+.current-temp {
+  font-size: 3em;
+  position: relative;
+}
+
+.left-50 {
+  -webkit-transform: translateX(-15%);
+          transform: translateX(-15%);
+}
+
+.right-50 {
+  -webkit-transform: translateX(15%);
+          transform: translateX(15%);
+}
+
+.current-temp:after {
+  content: "°";
+  position:absolute;
+  top: -0.5em;
+  right: -0.3em;
+}
+
+.clouds {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  bottom: 0;
+  left: 0;
+  background: url("https://s32.postimg.org/yoihkgp79/clouds.png");
+  background-size: 100%;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+}
+
+.landmark {
+  -webkit-transform: scale(1.05) translateY(5%);
+          transform: scale(1.05) translateY(5%);
+}
