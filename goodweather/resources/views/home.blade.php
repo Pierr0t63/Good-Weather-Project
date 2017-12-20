@@ -25,9 +25,6 @@
             <div class="row justify-content-center text-center">
                 {{ csrf_field() }}
                 <input id="posUser" name="posUser" class="form-control w-100 text-white col-lg-3 col-md-3 col-sm-10 col-xs-10 mr-4" type="text" placeholder="Renseignez votre ville, code postal..." aria-label="Search" title="Renseignez votre position">
-
-                <!-- <input id="user_input_autocomplete_address" name="user_input_autocomplete_address"
-                         class="form-control" placeholder="Start typing your address..."> -->
                 
                 <button id="geolo" type="button" class="btn btn-outline-warning waves-effect "><i class="fa fa-rocket" aria-hidden="true" title="Cliquez-ici pour vous géolocaliser"></i></button>
             </div>
@@ -40,9 +37,10 @@
     <!--  END HEADER -->
 
     <!-- WEATHER -->
-    <section class="container-fluid">
+    <section id="divMeteo" class="container-fluid">
         
     </section>
+    @linechart('Temps','divMeteo')
     <!-- END WEATHER -->
 
     <!-- MAP -->
@@ -54,28 +52,15 @@
     <script type="text/javascript">
 
         function initializeAutocomplete(id) {
+            var options = { 
+                types: ['(cities)'],
+                componentRestrictions: {country: 'fr'}
+            };
             var element = document.getElementById(id);
                 if (element) {
-                    var autocomplete = new google.maps.places.Autocomplete(element, { types: ['geocode'] });
-                google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
-            }
+                    var autocomplete = new google.maps.places.Autocomplete(element, options);
         }
 
-        function onPlaceChanged() {
-            var place = this.getPlace();
-
-        console.log(place);  // Uncomment this line to view the full object returned by Google API.
-
-            for (var i in place.address_components) {
-            var component = place.address_components[i];
-            for (var j in component.types) {  // Some types are ["country", "political"]
-            var type_element = document.getElementById(component.types[j]);
-            if (type_element) {
-            type_element.value = component.long_name;
-                    }
-                }
-            }
-        }
 
         google.maps.event.addDomListener(window, 'load', function() {
             initializeAutocomplete('posUser');
