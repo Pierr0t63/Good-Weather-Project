@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-@extends('template')
 
-@section('header')
 <header class="container-fluid justify-content-center text-center">
 	
         <img src="img/logo.png">
@@ -19,8 +16,7 @@
         <button type="button" class="btn btn-outline-white waves-effect col-lg-2 col-md-2 col-sm-2 col-xs-2"><i class="fa fa-sun-o pr-2" aria-hidden="true"></i>Valider</button>
 
 </header>
-@endsection
-=======
+
     <!-- HEADER -->
     <header class="container-fluid justify-content-center text-center">
         <div class="container mt-5">
@@ -131,4 +127,4 @@
 
     </header>
     <!--  END HEADER -->
->>>>>>> dev
+

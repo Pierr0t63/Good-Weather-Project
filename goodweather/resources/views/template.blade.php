@@ -14,28 +14,9 @@
     <link href="css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <link href="css/style.css" rel="stylesheet">
-<<<<<<< HEAD
 
-</head>
 
-<body >
-    <!-- HEADER -->
-    @yield('header')
-    <!--  END HEADER -->
 
-    <!-- WEATHER -->
-    <section class="container-fluid">
-        
-    </section>
-    <!-- END WEATHER -->
-
-    <!-- MAP -->
-    @yield('googlemap')
-    <!-- END MAP -->
-
-    <!-- FOOTER -->
-    @yield('footer')
-=======
 </head>
 
 <body >
@@ -72,7 +53,7 @@
         </div>
     </div>
     <!--/.Copyright-->
->>>>>>> dev
+
     <!--  END FOOTER -->
 
     <!-- SCRIPTS -->
@@ -84,12 +65,11 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
-<<<<<<< HEAD
-=======
+
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyCE3Td6VrNKRiGOPjLdKfKiVKGIoOhDDuw"></script>
 
     <script type="text/javascript" src="js/script.js"></script>
->>>>>>> dev
+
 </body>
 
 </html>
