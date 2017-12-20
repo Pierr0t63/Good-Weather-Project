@@ -14,7 +14,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view ("home");  
+        return view ("template");  
     }
 
     public function maMeteo(request $request)
@@ -78,6 +78,6 @@ class HomeController extends Controller
 
         Mapper::map($forecast->city->lat, $forecast->city->lon);
 
-		return view("home", compact('weather_city'));
+		return view("template", compact('weather_city'));
 	}
 }
