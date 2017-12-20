@@ -30,6 +30,7 @@ class HomeController extends Controller
         $owm->setApiKey('e469e4ae90d47fcdf9df7c2666e35487');
 
         $forecast = $owm->getWeatherForecast($city.',fr', $units, $lang, '', 5);
+        $weather_city = $owm->getWeather($city.',fr', $units, $lang);
 
         // Températures
         $temperatures = \Lava::DataTable();
@@ -77,6 +78,6 @@ class HomeController extends Controller
 
         Mapper::map($forecast->city->lat, $forecast->city->lon);
 
-		return view("home", compact('city'));
+		return view("home", compact('weather_city'));
 	}
 }
