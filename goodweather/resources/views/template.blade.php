@@ -14,6 +14,7 @@
     <link href="css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <link href="css/style.css" rel="stylesheet">
+<<<<<<< HEAD
 
 </head>
 
@@ -34,6 +35,44 @@
 
     <!-- FOOTER -->
     @yield('footer')
+=======
+</head>
+
+<body >
+
+    @include('header')
+
+    <!-- WEATHER -->
+    @isset($weather_city)
+    <section class=" row justify-content-center text-center col-12 mt-5 mb-5">
+
+        <!-- WIDGET -->
+        @include('widget')
+
+        <!-- MAP -->
+        @include('googlemap')
+
+        <!-- GRAPHS -->
+        @include('charts')
+            
+        @endisset
+        <!-- END GRAPHS -->
+    </section>
+    <!-- END WEATHER -->
+
+    
+
+   
+
+    <!-- FOOTER -->
+    <!--Copyright-->
+    <div class="footer-copyright justify-content-center text-center">
+        <div class="container-fluid text-white">
+            Propulsé par <i class="fa fa-sun-o" aria-hidden="true"></i>
+        </div>
+    </div>
+    <!--/.Copyright-->
+>>>>>>> dev
     <!--  END FOOTER -->
 
     <!-- SCRIPTS -->
@@ -45,6 +84,12 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
+<<<<<<< HEAD
+=======
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyCE3Td6VrNKRiGOPjLdKfKiVKGIoOhDDuw"></script>
+
+    <script type="text/javascript" src="js/script.js"></script>
+>>>>>>> dev
 </body>
 
 </html>

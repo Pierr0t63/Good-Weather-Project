@@ -130,6 +130,7 @@
     <!--  END HEADER -->
 
     <!-- WEATHER -->
+    @isset($weather_city)
     <section class=" row justify-content-center text-center col-12 mt-5 mb-5">
         <div class='weather-card col-3 p-0 justify-content-end'>
           <div class='weather-card--landmark mb-4'>
@@ -140,15 +141,15 @@
           </div>
           <div class='weather-card--cityname'>
             <h1>
-              Nom de la ville
+              {{$weather_city->city->name}}
             </h1>
           </div>
           <div class='weather-card--details'>
-            <span class='details--day'>Jour</span>
+            <span class='details--day'>{{$weather_city->lastUpdate->format('l')}}</span>
             |
-            <span class='details--date'>Mois</span>
+            <span class='details--date'>{{$weather_city->lastUpdate->format('F')}}</span>
             |
-            <span class='details--time'>Heures</span>
+            <span class='details--time'>{{$weather_city->lastUpdate->format('H:i:s')}}</span>
           </div>
           
           <div class='weather-card--cityname mt-2'>
@@ -157,7 +158,7 @@
             </h1>
           </div>
           <div class='weather-card--details'>
-            <span class='details--day'>09h00</span>
+            <span class='details--day'>{{$weather_city->sun->rise->format('H:i:s')}}</span>
         </div>
 
         <div class='weather-card--cityname mt-2'>
@@ -166,43 +167,72 @@
             </h1>
           </div>
           <div class='weather-card--details'>
-            <span class='details--day'>17h00</span>
+            <span class='details--day'>{{$weather_city->sun->set->format('H:i:s')}}</span>
         </div>
 
-        <div class='weather-card--temperature mt-4'>
-            <ul>
-              <li class='outer-temp'>22</li>
-              <li class='mid-temp left-50'>26</li>
-              <li class='current-temp'>29</li>
-              <li class='mid-temp right-50'>28</li>
-              <li class='outer-temp'>30</li>
+        <div class='weather-card--temperature mt-4 text-center justify-content-center'>
+            <ul class="text-center justify-content-center">
+              <li class='mid-temp left-50'>{{$weather_city->temperature->min->getValue()}}</li>
+              <li class='current-temp'>{{$weather_city->temperature->now->getValue()}}</li>
+              <li class='mid-temp right-50'>{{$weather_city->temperature->max->getValue()}}</li>
             </ul>
           </div>
         </div>
+    @endisset
         <!-- MAP -->
         <section id="carte" class="container col-6 mx-auto p-0 rounded">
                 {!! Mapper::render() !!}
-        </section>
-        <!-- END MAP -->
-
-        <!-- GRAPHS -->
+                <section class="container mt-5">
+            <!-- Nav tabs -->
+<ul class="nav nav-tabs nav-justified teal lighten-4" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#panel5" role="tab"><i class="fa fa-thermometer-empty"></i>Températures</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#panel6" role="tab"><i class="fa fa-paper-plane-o"></i> Vent</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#panel7" role="tab"><i class="fa fa-tint"></i> Humidité</a>
+    </li>
+</ul>
+<!-- Tab panels -->
+<div class="tab-content container col-6">
+    <!--Panel 1-->
+    <div class="tab-pane fade in show active container col-12" id="panel5" role="tabpanel">
+        <br>
         @isset($city)
-            <section id="divTemp" class="container-fluid">
+            <section id="divTemp" class="container col-12">
                 @linechart('Temps','divTemp')
             </section>
-            
+        @endisset
+    </div>
+    <!--/.Panel 1-->
 
-            <section id="divWind" class="container-fluid">
+    <!--Panel 2-->
+    <div class="tab-pane fade container col-12" id="panel6" role="tabpanel">
+        <br>
+        @isset($city)
+            <section id="divWind" class="container col-12">
                 @linechart('Vents','divWind')
             </section>
-            
-
-            <section id="divHumidity" class="container-fluid">
-                @linechart('Humidity','divHumidity')
-            </section>
-            
         @endisset
-        <!-- END GRAPHS -->
+    </div>
+    <!--/.Panel 2-->
+
+
+    <!--Panel 3-->
+    <div class="tab-pane fade container col-12" id="panel7" role="tabpanel">
+        <br>
+        @isset($city)
+            <section id="divHumidity" class="container col-12">
+                @linechart('Humidity','divHumidity')
+            </section>        
+        @endisset
+    </div>
+    <!--/.Panel 3-->
+</div>
+        </section>
+        </section>
     </section>
     <!-- END WEATHER -->
 
@@ -222,7 +252,8 @@
         }
 
 
-        google.maps.event.addDomListener(window, 'load', function() {
+        $( document ).ready(function() {
+            alert('toto');
             initializeAutocomplete('posUser');
         });
 

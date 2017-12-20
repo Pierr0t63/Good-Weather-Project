@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @extends('template')
 
 @section('header')
@@ -19,3 +20,5 @@
 
 </header>
 @endsection
+=======
+>>>>>>> dev
