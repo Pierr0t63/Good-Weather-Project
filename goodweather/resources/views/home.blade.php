@@ -251,7 +251,8 @@
         }
 
 
-        google.maps.event.addDomListener(window, 'load', function() {
+        $( document ).ready(function() {
+            alert('toto');
             initializeAutocomplete('posUser');
         });
 

@@ -40,25 +40,7 @@
 
     
 
-    <script type="text/javascript">
-
-        function initializeAutocomplete(id) {
-            var options = { 
-                types: ['(cities)'],
-                componentRestrictions: {country: 'fr'}
-            };
-            var element = document.getElementById(id);
-                if (element) {
-                    var autocomplete = new google.maps.places.Autocomplete(element, options);
-                }
-        }
-
-
-        google.maps.event.addDomListener(window, 'load', function() {
-            initializeAutocomplete('posUser');
-        });
-
-    </script>
+   
 
     <!-- FOOTER -->
     <!--Copyright-->
@@ -80,6 +62,8 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyCE3Td6VrNKRiGOPjLdKfKiVKGIoOhDDuw"></script>
+
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>
