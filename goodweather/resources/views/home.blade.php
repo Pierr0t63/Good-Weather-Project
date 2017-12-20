@@ -86,26 +86,31 @@
             </ul>
           </div>
         </div>
-    <!-- MAP -->
-    <section id="carte" class="container col-6 mx-auto p-0 rounded">
-            {!! Mapper::render() !!}
+        <!-- MAP -->
+        <section id="carte" class="container col-6 mx-auto p-0 rounded">
+                {!! Mapper::render() !!}
+        </section>
+        <!-- END MAP -->
+
+        <!-- GRAPHS -->
+        @isset($city)
+            <section id="divTemp" class="container-fluid">
+                @linechart('Temps','divTemp')
+            </section>
+            
+
+            <section id="divWind" class="container-fluid">
+                @linechart('Vents','divWind')
+            </section>
+            
+
+            <section id="divHumidity" class="container-fluid">
+                @linechart('Humidity','divHumidity')
+            </section>
+            
+        @endisset
+        <!-- END GRAPHS -->
     </section>
-    <!-- END MAP -->
-    @isset($city)
-        <section id="divTemp" class="container-fluid">
-        </section>
-        @linechart('Temps','divTemp')
-
-        <section id="divWind" class="container-fluid">
-        </section>
-        @linechart('Vents','divWind')
-
-        <section id="divHumidity" class="container-fluid">
-        </section>
-        @linechart('Humidity','divHumidity')
-    @endisset
-</section>
-<!-- END WEATHER -->
     <!-- END WEATHER -->
 
     
