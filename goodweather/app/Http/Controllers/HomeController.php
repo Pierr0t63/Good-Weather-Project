@@ -26,6 +26,8 @@ class HomeController extends Controller
             $units = 'metric';
             // Ville
             $city = $request->posUser;
+            $city = explode(', ', trim($city));
+            $city = $city[0];
 
             $owm = new OpenWeatherMap();
             $owm->setApiKey('e469e4ae90d47fcdf9df7c2666e35487');
