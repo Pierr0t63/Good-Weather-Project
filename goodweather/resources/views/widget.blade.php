@@ -39,9 +39,11 @@
 
         <div class='weather-card--temperature mt-4'>
             <ul>
-              <li class='mid-temp left-50'>{{$weather_city->temperature->min->getValue()}}</li>
-              <li class='current-temp'>{{$weather_city->temperature->now->getValue()}}</li>
-              <li class='mid-temp right-50'>{{$weather_city->temperature->max->getValue()}}</li>
+              <li class='mid-temp left-50 text-info'>Min</li>
+              <li class='mid-temp left-50'>{{round($weather_city->temperature->min->getValue())}}</li>
+              <li class='current-temp'>{{round($weather_city->temperature->now->getValue())}}</li>
+              <li class='mid-temp right-50'>{{round($weather_city->temperature->max->getValue())}}</li>
+              <li class='mid-temp left-50 text-danger'>Max</li>
             </ul>
           </div>
         </div>
