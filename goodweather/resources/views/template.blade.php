@@ -56,7 +56,7 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyCE3Td6VrNKRiGOPjLdKfKiVKGIoOhDDuw"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCE3Td6VrNKRiGOPjLdKfKiVKGIoOhDDuw&libraries=places&callback=initAutocomplete" async defer></script>
 
     <script type="text/javascript" src="js/script.js"></script>
 </body>

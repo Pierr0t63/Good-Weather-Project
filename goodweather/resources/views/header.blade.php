@@ -96,6 +96,7 @@
 
         <form class="active-white-2" action='{{URL::current()}}' method="POST">
             <div class="row justify-content-center">
+              
                 {{ csrf_field() }}
                 <input id="posUser" name="posUser" class="form-control w-100 text-white col-lg-4 col-md-4 col-sm-12 col-xs-12 mr-4" type="text" placeholder="Renseignez votre ville, code postal..." aria-label="Search" title="Renseignez votre position">
                 
