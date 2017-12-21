@@ -12,6 +12,7 @@
 </ul>
 <!-- Tab panels -->
 <div class="tab-content container-fluid">
+
     <!--Panel 1-->
     <div class="tab-pane fade in show active" id="panel5" role="tabpanel">
         <br>
@@ -20,20 +21,23 @@
         </section>
     </div>
     <!--/.Panel 1-->
+
     <!--Panel 2-->
-    <div class="tab-pane fade" id="panel6" role="tabpanel">
+    <div class="tab-pane fade in active" id="panel6" role="tabpanel">
         <br>
          <section id="divWind" class="container-fluid">
             @linechart('Vents','divWind')
         </section>
     </div>
     <!--/.Panel 2-->
+
     <!--Panel 3-->
-    <div class="tab-pane fade" id="panel7" role="tabpanel">
+    <div class="tab-pane fade in active" id="panel7" role="tabpanel">
         <br>
         <section id="divHumidity" class="container-fluid">
             @linechart('Humidity','divHumidity')
         </section>
     </div>
     <!--/.Panel 3-->
+    
 </div>
