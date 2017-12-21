@@ -33,8 +33,6 @@
         <!-- GRAPHS -->
         @include('charts')
             
-        
-        <!-- END GRAPHS -->
     </section>
     @endisset
     <!-- END WEATHER -->
@@ -43,7 +41,7 @@
     <!--Copyright-->
     <div class="footer-copyright justify-content-center text-center">
         <div class="container-fluid text-white">
-            Propulsé par <i class="fa fa-sun-o" aria-hidden="true"></i>
+            Propulsé par <a href="https://laravel.com" target="_blank"><img height="25" width="25" src="img/laravel_logo.png" alt="Laravel" title="Laravel"></a> avec les donnée de <a href="https://openweathermap.org" target="_blank"><img height="25" width="25" src="img/openweathermap_logo.png" alt="OpenWeatherMap" title="OpenWeatherMap"></a>
         </div>
     </div>
     <!--/.Copyright-->
