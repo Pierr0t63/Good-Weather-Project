@@ -195,9 +195,9 @@
     </li>
 </ul>
 <!-- Tab panels -->
-<div class="tab-content container col-6">
+<div class="tab-content container col-10">
     <!--Panel 1-->
-    <div class="tab-pane fade in show active container col-12" id="panel5" role="tabpanel">
+    <div class="tab-pane fade in show active container col-10" id="panel5" role="tabpanel">
         <br>
         @isset($city)
             <section id="divTemp" class="container col-12">
